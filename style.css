@@ -3,7 +3,6 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-
 .container {
   width: 1152px;
   height: 700px;
@@ -34,7 +33,6 @@
   width: 630px;
   display: contents;
 }
-
 .sign_in {
   margin-right: 100px;
   background-color: #ffffff;
@@ -54,13 +52,15 @@
 .just_text p {
   font-size: 36px;
   font-weight: 700;
-  text-align: center;
+  margin-left: 250px;
   margin-top: 56px;
+  margin-bottom: 33px;
 }
 .left input {
   width: 259px;
   height: 102px;
   border: 1px solid #e5e5e5;
+  border-radius: 3px;
 }
 .right input {
   width: 259px;
@@ -68,28 +68,42 @@
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 }
+.left {
+  margin-left: 253px;
+}
+.right {
+  margin-left: 123px;
+}
+.left p {
+  margin-bottom: 15px;
+}
+.right p {
+  margin-bottom: 15px;
+}
 .valutes_left {
   width: 259px;
   height: 30px;
-  border: 1px solid #e5e5e5;
   border-radius: 3px;
   display: flex;
+  margin-bottom: 15px;
 }
 .valutes_right {
   width: 259px;
   height: 30px;
-  border: 1px solid #e5e5e5;
   border-radius: 3px;
   display: flex;
+  margin-bottom: 15px;
 }
 .valutes_left p {
   width: 65px;
+  height: 30px;
   border: solid 1px #e5e5e5;
   text-align: center;
   cursor: pointer;
 }
 .valutes_right p {
   width: 65px;
+  height: 30px;
   border: solid 1px #e5e5e5;
   text-align: center;
   cursor: pointer;
