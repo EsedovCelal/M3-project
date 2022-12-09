@@ -21,13 +21,19 @@
   height: 23px;
   margin-left: 100px;
   margin-top: 11px;
+  margin-right: 64px;
 }
 .header a {
   font-size: 11px;
   text-decoration: none;
   color: #959ba4;
-  margin-top: 15px;
+  margin-top: 20px;
 }
+.categories {
+  width: 630px;
+  display: contents;
+}
+
 .sign_out {
   margin-right: 100px;
   background-color: #ffffff;
@@ -35,15 +41,10 @@
   height: 33px;
   border-radius: 4px;
   margin-top: 7.5px;
+  margin-left: 115px;
 }
 .sign_out p {
   font-size: 11px;
   margin-top: 10px;
   text-align: center;
-}
-.categories {
-  max-width: 630px;
-  /* display: flex;
-  justify-content: space-evenly; */
-  display: contents;
 }
