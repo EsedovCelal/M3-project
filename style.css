@@ -7,7 +7,6 @@
 .container {
   width: 1152px;
   height: 700px;
-  background-color: aquamarine;
 }
 .header {
   width: 1152px;
@@ -22,19 +21,21 @@
   margin-left: 100px;
   margin-top: 11px;
   margin-right: 64px;
+  cursor: pointer;
 }
 .header a {
   font-size: 11px;
   text-decoration: none;
   color: #959ba4;
   margin-top: 20px;
+  font-weight: 500;
 }
 .categories {
   width: 630px;
   display: contents;
 }
 
-.sign_out {
+.sign_in {
   margin-right: 100px;
   background-color: #ffffff;
   width: 58px;
@@ -43,8 +44,56 @@
   margin-top: 7.5px;
   margin-left: 115px;
 }
-.sign_out p {
+.sign_in p {
   font-size: 11px;
   margin-top: 10px;
   text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+.just_text p {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 56px;
+}
+.left input {
+  width: 259px;
+  height: 102px;
+  border: 1px solid #e5e5e5;
+}
+.right input {
+  width: 259px;
+  height: 102px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+.valutes_left {
+  width: 259px;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  display: flex;
+}
+.valutes_right {
+  width: 259px;
+  height: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  display: flex;
+}
+.valutes_left p {
+  width: 65px;
+  border: solid 1px #e5e5e5;
+  text-align: center;
+  cursor: pointer;
+}
+.valutes_right p {
+  width: 65px;
+  border: solid 1px #e5e5e5;
+  text-align: center;
+  cursor: pointer;
+}
+.show_valuta_place {
+  display: flex;
 }
