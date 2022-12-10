@@ -114,11 +114,16 @@
 .show_valuta_place {
   display: flex;
 }
-.left_AZN {
+/* .left_AZN_default {
   background-color: #833ae0;
   color: white;
 }
-.right_USD {
+.right_USD_default {
+  background-color: #833ae0;
+  color: white;
+} */
+
+.active {
   background-color: #833ae0;
   color: white;
 }
