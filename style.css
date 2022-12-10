@@ -71,6 +71,16 @@
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 }
+/* .right_input_div {
+  position: relative;
+}
+/* .right_input_div p {
+  position: absolute;
+} */
+/* .right_input_div input {
+  position: absolute;
+} */
+
 .left {
   margin-left: 253px;
 }
