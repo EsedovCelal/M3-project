@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  color: #959ba4;
 }
 .container {
   width: 1152px;
@@ -48,6 +49,7 @@
   text-align: center;
   font-weight: 500;
   cursor: pointer;
+  color: black;
 }
 .just_text p {
   font-size: 36px;
@@ -55,6 +57,7 @@
   margin-left: 250px;
   margin-top: 56px;
   margin-bottom: 33px;
+  color: black;
 }
 .left input {
   width: 259px;
@@ -110,4 +113,12 @@
 }
 .show_valuta_place {
   display: flex;
+}
+.left_AZN {
+  background-color: #833ae0;
+  color: white;
+}
+.right_USD {
+  background-color: #833ae0;
+  color: white;
 }
