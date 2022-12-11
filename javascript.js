@@ -62,21 +62,37 @@ right_all.forEach((item) => {
       .classList.remove("active");
     e.target.classList.add("active");
     selected_right = e.target.innerText;
-    right(selected_right);
+    // right(selected_right);
+    const left_innerText = document.querySelector(
+      ".left .valutes_left .active"
+    ).innerText;
+    fetch(
+      `https://api.exchangerate.host/latest?base=${left_innerText}&symbols=${selected_right}`
+    )
+      .then((link) => link.json())
+      .then((link) => {
+        const rate = link.rates[selected_right];
+        let right_Input_p = document.querySelector(".right .right_input_div p");
+        let right_Input_Value = document.querySelector(
+          ".right .right_input_div .right_input"
+        );
+        let left_Input_Value = document.querySelector(
+          ".left .left_input_div .left_input"
+        );
+        right_Input_Value.value = (+left_Input_Value.value * rate).toFixed(2);
+        right_Input_p.innerText = `1 ${selected_right} = ${link.rates[selected_right]} ${left_innerText}`;
+      });
   });
 });
 left(selected_left);
 right(selected_right);
 const left_input = document.querySelector(".left .left_input_div .left_input");
-left_input.addEventListener("keyup", (event) => {
+left_input.addEventListener("keyup", () => {
   left(selected_left);
-  console.log(selected_left);
 });
-
 const right_input = document.querySelector(
   ".right .right_input_div .right_input"
 );
-right_input.addEventListener("keyup", (event) => {
+right_input.addEventListener("keyup", () => {
   right(selected_right);
-  console.log(selected_right);
 });
