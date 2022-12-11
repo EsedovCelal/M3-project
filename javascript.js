@@ -1,26 +1,55 @@
 const left_all = document.querySelectorAll(".valutes_left");
 const right_all = document.querySelectorAll(".valutes_right");
-// const left_AZN = document.querySelector(".left_AZN");
-// const left_USD = document.querySelector(".left_USD");
-// const left_EUR = document.querySelector(".left_EUR");
-// const left_GBP = document.querySelector(".left_GBP");
-// const right_AZN = document.querySelector(".right_AZN");
-// const right_USD = document.querySelector("right_USD");
-// const right_EUR = document.querySelector(".right_EUR");
-// const right_GBP = document.querySelector(".right_GBP");
 const left_input = document.querySelector(".left_input");
 const right_input = document.querySelector(".right_input");
-
+function left(selected) {
+  const right_innerText = document.querySelector(
+    ".right .valutes_right .active"
+  ).innerText;
+  fetch(
+    `https://api.exchangerate.host/latest?base=${selected}&symbols=${right_innerText}`
+  )
+    .then((link) => link.json())
+    .then((link) => {
+      const left_Input_Value = document.querySelector(
+        ".left .left_input_div .left_input"
+      ).value;
+      const right_Input_Value = document.querySelector(
+        ".right .right_input_div .right_input"
+      );
+      right_Input_Value.value = (
+        +left_Input_Value * link.rates[right_innerText]
+      ).toFixed(2);
+    });
+}
+function right(selected) {
+  const left_innerText = document.querySelector(
+    ".left .valutes_left .active"
+  ).innerText;
+  fetch(
+    `https://api.exchangerate.host/latest?base=${selected}&symbols=${left_innerText}`
+  )
+    .then((link) => link.json())
+    .then((link) => {
+      const right_Input_Value = document.querySelector(
+        ".right .right_input_div .right_input"
+      ).value;
+      const left_Input_Value = document.querySelector(
+        ".left .left_input_div .left_input"
+      );
+      right_Input_Value = (
+        +left_Input_Value / link.rates[left_innerText]
+      ).toFixed(2);
+    });
+}
 left_all.forEach((item) => {
   item.addEventListener("click", (e) => {
     document
       .querySelector(".show_valuta_place .left .active")
       .classList.remove("active");
     e.target.classList.add("active");
-    const selectedcurr = e.target;
-    fetch(``);
-    // if (e.target.innerText === "AZN") {
-    // }
+    const selected = e.target.innerText;
+    left(selected);
   });
 });
 right_all.forEach((item) => {
@@ -29,5 +58,7 @@ right_all.forEach((item) => {
       .querySelector(".show_valuta_place .right .active")
       .classList.remove("active");
     e.target.classList.add("active");
+    const selected = e.target.innerText;
+    right(selected);
   });
 });
