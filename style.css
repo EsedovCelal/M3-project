@@ -64,19 +64,24 @@
   height: 102px;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
+  font-size: 40px;
+  color: black;
 }
 .right input {
   width: 259px;
   height: 102px;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
+  font-size: 40px;
+  color: black;
 }
 /* .right_input_div {
   position: relative;
-}
+} */
 /* .right_input_div p {
   position: absolute;
 } */
+
 /* .right_input_div input {
   position: absolute;
 } */
@@ -124,15 +129,6 @@
 .show_valuta_place {
   display: flex;
 }
-/* .left_AZN_default {
-  background-color: #833ae0;
-  color: white;
-}
-.right_USD_default {
-  background-color: #833ae0;
-  color: white;
-} */
-
 .active {
   background-color: #833ae0;
   color: white;
