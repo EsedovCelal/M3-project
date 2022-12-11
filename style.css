@@ -75,17 +75,30 @@
   font-size: 40px;
   color: black;
 }
-/* .right_input_div {
+.left_input_div {
   position: relative;
-} */
-/* .right_input_div p {
+}
+.left_input_div p {
   position: absolute;
-} */
-
-/* .right_input_div input {
+  margin-bottom: -10px;
+  margin-top: 85px;
+  margin-left: 5px;
+}
+.left_input_div input {
   position: absolute;
-} */
-
+}
+.right_input_div {
+  position: relative;
+}
+.right_input_div p {
+  position: absolute;
+  margin-bottom: -10px;
+  margin-top: 85px;
+  margin-left: 5px;
+}
+.right_input_div input {
+  position: absolute;
+}
 .left {
   margin-left: 253px;
 }
