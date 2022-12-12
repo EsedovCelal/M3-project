@@ -77,6 +77,7 @@ right_all.forEach((item) => {
       .then((link) => link.json())
       .then((link) => {
         const rate = link.rates[selected_right];
+        console.log(rate);
         let right_Input_p = document.querySelector(".right .right_input_div p");
         let left_Input_p = document.querySelector(".left .left_input_div p");
         let right_Input_Value = document.querySelector(
