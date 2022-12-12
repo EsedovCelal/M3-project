@@ -60,22 +60,24 @@
   color: black;
 }
 .left input {
-  width: 259px;
+  width: 242px;
   height: 102px;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
   font-size: 36px;
   font-weight: 700;
   color: black;
+  padding-left: 15px;
 }
 .right input {
-  width: 259px;
+  width: 242px;
   height: 102px;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
   font-size: 36px;
   font-weight: 700;
   color: black;
+  padding-left: 15px;
 }
 .left_input_div {
   position: relative;

@@ -12,8 +12,7 @@ function left(selected) {
     .then((link) => link.json())
     .then((link) => {
       let left_Input_p = document.querySelector(".left .left_input_div p");
-      let right_Input_p = document.querySelector(".right .right_input_div p"); //////
-      console.log(right_Input_p);
+      let right_Input_p = document.querySelector(".right .right_input_div p");
       const left_Input_Value = document.querySelector(
         ".left .left_input_div .left_input"
       ).value;
@@ -26,7 +25,10 @@ function left(selected) {
       left_Input_p.innerText = `1 ${selected} = ${link.rates[right_innerText]} ${right_innerText}`;
       right_Input_p.innerText = `1 ${right_innerText} = ${(
         1 / link.rates[right_innerText]
-      ).toFixed(6)} ${selected}`; //////
+      ).toFixed(6)} ${selected}`;
+      if (right_Input_Value.value === "0.00") {
+        right_Input_Value.value = "";
+      }
     });
 }
 function right(selected) {
@@ -48,6 +50,9 @@ function right(selected) {
       );
       left_Input_Value.value = (+right_Input_Value.value * rate).toFixed(2);
       right_Input_p.innerText = `1 ${selected} = ${link.rates[left_innerText]} ${left_innerText}`;
+      if (left_Input_Value.value === "0.00") {
+        left_Input_Value.value = "";
+      }
     });
 }
 left_all.forEach((item) => {
@@ -67,7 +72,6 @@ right_all.forEach((item) => {
       .classList.remove("active");
     e.target.classList.add("active");
     selected_right = e.target.innerText;
-    // right(selected_right);
     const left_innerText = document.querySelector(
       ".left .valutes_left .active"
     ).innerText;
@@ -77,7 +81,6 @@ right_all.forEach((item) => {
       .then((link) => link.json())
       .then((link) => {
         const rate = link.rates[selected_right];
-        console.log(rate);
         let right_Input_p = document.querySelector(".right .right_input_div p");
         let left_Input_p = document.querySelector(".left .left_input_div p");
         let right_Input_Value = document.querySelector(
@@ -86,7 +89,9 @@ right_all.forEach((item) => {
         let left_Input_Value = document.querySelector(
           ".left .left_input_div .left_input"
         );
-        right_Input_Value.value = (+left_Input_Value.value * rate).toFixed(2);
+        if (left_Input_Value.value !== "") {
+          right_Input_Value.value = (+left_Input_Value.value * rate).toFixed(2);
+        }
         right_Input_p.innerText = `1 ${selected_right} = ${link.rates[selected_right]} ${left_innerText}`;
         left_Input_p.innerText = `1 ${left_innerText} = ${(1 / rate).toFixed(
           6
