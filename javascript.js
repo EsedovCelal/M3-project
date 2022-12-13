@@ -111,3 +111,9 @@ const right_input = document.querySelector(
 right_input.addEventListener("keyup", () => {
   right(selected_right);
 });
+window.addEventListener("offline", (e) => {
+  console.log("offline");
+});
+window.addEventListener("online", (e) => {
+  console.log("online");
+});
